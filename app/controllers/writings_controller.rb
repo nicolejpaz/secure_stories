@@ -9,4 +9,8 @@ class WritingsController < ApplicationController
     @story.save
     redirect_to writing_path(@story.story_id)
   end
+
+  def show
+    @story = Writing.find_by(story_id: params[:id])
+  end
 end
