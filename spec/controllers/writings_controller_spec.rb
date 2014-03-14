@@ -14,5 +14,10 @@ describe WritingsController do
       post :create, attributes_for(:writing)
       expect(Writing.all.count).to eq(count + 1)
     end
+
+    it "generates a story_id" do
+      post :create, attributes_for(:writing)
+      expect(Writing.last.story_id).to_not be_nil
+    end
   end
 end
