@@ -19,6 +19,11 @@ describe WritingsController do
       post :create, attributes_for(:writing)
       expect(Writing.last.story_id).to_not be_nil
     end
+
+    it "assigns a default name if none is given" do
+      post :create, attributes_for(:writing, name: '')
+      expect(Writing.last.name).to eq "Unnamed Story"
+    end
   end
 
   describe "GET show" do
