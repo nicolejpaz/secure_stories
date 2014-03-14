@@ -1,6 +1,7 @@
+require 'faker'
+
 FactoryGirl.define do
   factory :writing do
-    name "Test Name"
-    text "Test text."
+    name Faker::Lorem.words.join(' ')
   end
 end
