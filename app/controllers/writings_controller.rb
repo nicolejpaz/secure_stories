@@ -1,5 +1,5 @@
 class WritingsController < ApplicationController
-  def index
-
+  def new
+    @story = Writing.new
   end
 end

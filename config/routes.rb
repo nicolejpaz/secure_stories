@@ -1,4 +1,4 @@
 SecureStories::Application.routes.draw do
-  root 'writings#index'
+  root 'writings#new'
   resources :writings
 end
