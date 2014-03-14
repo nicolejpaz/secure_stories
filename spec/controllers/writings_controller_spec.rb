@@ -7,4 +7,12 @@ describe WritingsController do
       expect(assigns(:story).is_a?(Writing)).to eq(true)
     end
   end
+
+  describe "POST create" do
+    it "creates a new writing object" do
+      count = Writing.all.count
+      post :create, attributes_for(:writing)
+      expect(Writing.all.count).to eq(count + 1)
+    end
+  end
 end
