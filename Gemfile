@@ -17,6 +17,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :test do
+group :test, :development do
   gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner'
 end
