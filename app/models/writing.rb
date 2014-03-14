@@ -15,6 +15,6 @@ class Writing
     sample_of_all_letters_and_numbers = all_letters_and_numbers.sample(10)
     joined_sample = sample_of_all_letters_and_numbers.join('')
     sample_hash = Digest::MD5.hexdigest(joined_sample)
-    return sample_hash.slice(0..20)
+    self.story_id = sample_hash.slice(0..20) if self.story_id == nil
   end
 end
