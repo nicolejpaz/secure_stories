@@ -27,13 +27,12 @@ describe WritingsController do
   end
 
   describe "GET show" do
-    before(:each) do
+    before(:all) do
       @story = create(:writing)
     end
 
     it "assigns @story to the writing with the given story_id" do
       get :show, id: @story.story_id
-
       expect(assigns(:story)).to eq(@story)
     end
   end
