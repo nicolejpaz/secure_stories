@@ -1,4 +1,4 @@
-class Writing
+class Story
   require 'digest/md5'
   include Rails.application.routes.url_helpers
   include Mongoid::Document
