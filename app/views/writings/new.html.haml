@@ -1,0 +1,11 @@
+.row
+  .col-md-2
+  .col-md-8
+    %h3 Create a new story:
+    = form_for :story, html: { class: "form-inline" } do |f|
+      .input-group
+        = f.label :name, :class => 'input-group-addon'
+        = f.text_field :name, :class => 'form-control'
+        %span.input-group-btn
+          = f.submit 'Write a Story!', :class => 'btn btn-default'
+  .col-md-2
