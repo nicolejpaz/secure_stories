@@ -1,6 +1,6 @@
 SecureStories::Application.routes.draw do
-  root 'writings#new'
-  post '/' => 'writings#create'
+  root 'stories#new'
+  post '/' => 'stories#create'
 
-  resources :writings
+  resources :stories
 end
